@@ -50,7 +50,7 @@ for i = 1:10
     validationClasses = getClasses(a); % decodare
     trainingClasses = trainLabels(indici_testare);
     
-    localAccuracy = size(find(validationClasses == trainingClasses), 1);
+    localAccuracy = size(find(validationClasses == trainingClasses), 1) / size(indici_testare, 2);
     accuracies(i, 1) = localAccuracy;
     
     % pastrarea retelei cu cea mai mare acuratete pe multimea de test
